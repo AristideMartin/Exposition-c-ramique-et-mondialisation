@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Innovations Room | Artifacts & Wonders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        /* Style pour le fond de la salle moderne */
+        .modern-room-bg {
+            background-image: url('https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/salle3.png');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <custom-navbar></custom-navbar>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Propulsion du céramiste sur la scène artistique internationale</h1>
+            <p class="text-gray-600 mb-4">
+            <div class="flex items-center text-gray-500">
+                <i data-feather="clock" class="mr-2"></i>
+                <span>Temps de visite estimé : 15 minutes</span>
+            </div>
+        </section>
+
+        <div class="flex justify-center mb-8">
+            <div class="bg-white rounded-full shadow-md px-6 py-2 inline-flex items-center">
+                <span class="text-indigo-600 font-medium">Salle Actuelle : 3 sur 3</span>
+                <a href="room2.html" class="ml-4 text-gray-600 hover:text-indigo-600 transition flex items-center">
+                    <i data-feather="arrow-left" class="mr-1"></i> Salle Précédente
+                </a>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Plan de la Salle</h2>
+                    <div class="relative rounded-lg h-96 overflow-hidden">
+                        <!-- Fond d'image moderne avec filtre léger -->
+                        <div class="absolute inset-0 modern-room-bg z-0"></div>
+                        <div class="absolute inset-0 bg-black/10 z-0"></div> <!-- Filtre pour améliorer la lisibilité -->
+
+                        <!-- Conteneur pour TOUS les blocs cliquables -->
+                        <div class="relative h-full z-10">
+                            <!-- Blocs indigo (yeux) - positionnés au-dessus du fond -->
+                            <div class="absolute top-[45%] left-[120px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition"
+                                onclick="showArtifact('artifact1')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/arche.png" alt="Artifact 1" class="w-8 h-8 object-contain">
+                            </div>
+
+                            <div class="absolute top-[42%] right-[105px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition"
+                                onclick="showArtifact('artifact2')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/ombre.png" alt="Artifact 2" class="w-8 h-8 object-contain">
+                            </div>
+
+                            <div class="absolute top-[80%] left-[200px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition"
+                                onclick="showArtifact('artifact3')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/picasso.png" alt="Artifact 3" class="w-8 h-8 object-contain">
+                            </div>
+
+                            <div class="absolute top-[82%] right-[215px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition"
+                                onclick="showArtifact('artifact4')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/soulages.png" alt="Artifact 4" class="w-8 h-8 object-contain">
+                            </div>
+
+                            <div class="absolute top-[27px] left-[208px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition"
+                                onclick="showArtifact('artifact5')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/Picture.png" alt="Artifact 5" class="w-8 h-8 object-contain">
+                            </div>
+
+                            <div class="absolute top-[40px] right-[200px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition"
+                                onclick="showArtifact('artifact6')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/bracquemond.png" alt="Artifact 6" class="w-8 h-8 object-contain">
+                            </div>
+
+                            <!-- Carrés ambre (info) -->
+                            <div class="absolute top-[58%] left-[130px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info1')">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+                            <div class="absolute top-[34%] right-[105px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info2')">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+                            <div class="absolute top-[60px] left-[180px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info3')">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+                            <div class="absolute top-[79%] right-[180px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info4')">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+                            <div class="absolute top-[84%] left-[240px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info5')">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+                            <div class="absolute top-[60px] right-[160px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info6')">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+
+                            <!-- Case violette (parcours enfant) -->
+                            <div class="absolute top-[190px] right-[400px] w-10 h-10 bg-purple-100 border-2 border-purple-400 flex items-center justify-center cursor-pointer hover:bg-purple-200 transition"
+                                onclick="showKidInfo()">
+                                <i data-feather="smile" class="text-purple-600"></i>
+                            </div>
+                            <!-- Bloc coloré supplémentaire (teal) : icône-image mais pas dans le panneau d'info -->
+                            <div class="absolute top-[0px] right-[220px] w-12 h-12 bg-teal-100 rounded-full border-2 border-teal-400 flex items-center justify-center cursor-pointer hover:bg-teal-200 transition" onclick="showArtifact('artifact10'); hideArtifactImage()" title="Voir (sans image)">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/IMG-20251218-WA0000.jpg" alt="Teal Icon" class="w-8 h-8 object-contain">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="bg-white rounded-xl shadow-lg p-6 sticky top-8">
+                    <h2 id="artifact-panel-title" class="text-2xl font-bold text-gray-800 mb-4">Informations sur l'Exposition</h2>
+                    <div id="artifact-info" class="text-gray-600">
+                        <p class="text-center py-8">Cliquez sur une exposition dans le plan de la salle pour voir les détails</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="container mx-auto px-4 py-8 text-center">
+        <a href="index.html" class="inline-block px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition text-lg font-medium">
+            Terminer l'Exposition <i data-feather="home" class="inline ml-2"></i>
+        </a>
+    </div>
+
+    <custom-footer></custom-footer>
+
+    <script>
+        // Fonctions JavaScript inchangées
+        function showKidInfo() {
+            const infoDiv = document.getElementById('artifact-info');
+            infoDiv.innerHTML = `
+                <h3 class="text-xl font-bold text-purple-800 mb-2">Parcours Enfant</h3>
+                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/arche.png" alt="Technologie pour enfants" class="w-full h-auto max-h-64 object-contain rounded-lg mb-4">
+                <div class="bg-purple-50 border-l-4 border-purple-400 p-4 rounded-r">
+                    <p class="text-purple-800">Regarde bien L’Arche de Roger Capron. Cette grande sculpture en terre est habitée par des animaux ! Les connais-tu tous? Trouveras-tu le petit tatou?</p>
+                    <p class="text-purple-800 mt-2">Appuie ici pour une surprise technologique !</p>
+                    <button onclick="showKidSurprise()" class="mt-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">
+                        Voir le tatou surprise
+                    </button>
+                </div>
+            `;
+        }
+
+        function showKidSurprise() {
+            const infoDiv = document.getElementById('artifact-info');
+            infoDiv.innerHTML = `
+                <h3 class="text-xl font-bold text-purple-800 mb-2">Trouvé !</h3>
+                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/arche_tatou.png" alt="Surprise techno pour enfants" class="w-full h-auto max-h-64 object-contain rounded-lg mb-4">
+                <div class="bg-purple-50 border-l-4 border-purple-400 p-4 rounded-r">
+                    <p class="text-purple-800">Et oui, il est en bas à droite. Le petit tatou supporte le poids des animaux de l'arche. Heureusement qu'il a la carapace solide</p>
+                    <p class="text-purple-800 mt-2">Et toi, quel est ton animal préféré dans cette arche?</p>
+                </div>
+            `;
+        }
+
+        function showArtifact(id) {
+    const artifacts = {
+                artifact1: {
+                    title: "L'Arche",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/arche.png",
+                    artiste: "Roger Capron (1922-2006)",
+                    "Lieu de création": "Vallauris, France",
+                    "Matière/technique": "Terre émaillée et enfumée",
+                    année: "1998",
+                    lieu: "Sèvres, cité de la céramique",
+                    dimensions: "Hauteur: 158 cm - Largeur 103 cm",
+                    "numéro d'inventaire": "MNC 27523"
+                },
+                artifact2: {
+                    titre: "Ombre",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/ombre.png",
+                    artiste: "Setsuko Nagasawa (née en 1941)",
+                    "Lieu de création": "Japon",
+                    "Matière/technique": "Raku",
+                    année: "2010",
+                    lieu: "Sèvres, cité de la céramique",
+                    dimensions: "Hauteur: 30 cm - Longueur: 30 cm",
+                    "numéro d'inventaire": "2011.1.24"
+                },
+                artifact3: {
+                    title: "Vase : femme à l'amphore",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/picasso.png",
+                    artiste: "Pablo Picasso",
+                    "Lieu de création": "Vallauris, France",
+                    "Matière/technique": "Terre blanche ; éléments tournés, modelés et assemblés; décor aux engobes et émail blanc, incisions, patine après cuisson",
+                    année: "1947",
+                    lieu: "Musée national Picasso-Paris",
+                    dimensions: "Hauteur: 42,5 cm - Longueur: 32,5 cm - Largeur: 15,5 cm",
+                    "numéro d'inventaire": "MP3679"
+                },
+                artifact4: {
+                    title: "Vase Soulages",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/soulages.png",
+                    artiste: "Pierre Soulages (né à Rodez en 1919) ",
+                    "Lieu de création": "Sèvres",
+                    année: "2000-2008",
+                    lieu: "Sèvres, cité de la céramique",
+                    dimensions: "Hauteur: 66 cm - Diamètre: 34,5 cm",
+                    "numéro d'inventaire": "2011.D.3309"
+                },
+                artifact5: {
+                    title: "Vase Ruhlmann 3",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/Picture.png",
+                    artiste: "Émile-Jacques Ruhlmann (1879-1933), Germaine Couret-Duminy (active à Sèvres de 1928 à 1937) ",
+                    "Lieu de création": "Sèvres",
+                    "Matière/technique": "Porcelaine dure et décor gravé",
+                    année: "1929",
+                    lieu: "Sèvres, cité de la céramique",
+                    dimensions: "Hauteur: 22,5 cm - Diamètre: 24,7 cm",
+                    "numéro d'inventaire": "2009.D.674"
+                },
+                artifact6: {
+                    title: "Assiette Bracquemond",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/bracquemond.png",
+                    artiste: "Bracquemond, Félix Henri (1833-1914)",
+                    "Lieu de création": "Limoges",
+                    "Matière/technique": "Porcelaine dure et décor gravé",
+                    année: "1876",
+                    lieu: "Paris, musée des Arts décoratifs",
+                    dimensions: "Hauteur: 1,7 cm, Diamètre: 22,7 cm",
+                    "numéro d'inventaire": "N°inv. 16973 (MAD-1)"
+                },
+                artifact10: {
+                    "Présentation":"Depuis la fin du XIXe siècle, la céramique s'affirme comme un langage artistique universel. Cette salle explore comment des artistes, des artisans et des manufactures ont transformé ce médium ancestral en un terrain d’expérimentation et d’échanges, à l’heure où la mondialisation redessine les frontières culturelles. Ici, les œuvres de Roger Capron, Pierre Soulages, Pablo Picasso, Setsuko Nagasawa et Émile-Jacques Ruhlmann témoignent de cette révolution. Chacune d’elles raconte une histoire de rencontres : entre traditions locales et influences lointaines, entre savoir-faire artisanaux et audace créatrice. À Vallauris, comme à Sèvres ou au Japon, la céramique devient le support d’une expression artistique qui dépasse les frontières, portées par des créateurs dont la renommée s’étend bien au-delà de leur territoire d’origine. Ces pièces, par leur technique, leur esthétique et leur symbolique, révèlent comment la céramique a su capter l’esprit de leur temps. Qu’il s’agisse des formes monumentales de Capron, des jeux de lumière de Soulages, des motifs antiques réinventés par Picasso, des textures poétiques de Nagasawa ou de l’élégance géométrique de Ruhlmann, chaque œuvre incarne une réponse unique à une question commune : comment créer un langage visuel à travers la céramique, tout en affirmant son identité propre d'artiste? En parcourant cette salle, vous découvrirez comment la céramique, à travers le geste de ces artistes, un témoin des échanges entre culture et un acteur de la mondialisation artistique."                  
+                }
+};
+
+            const artifact = artifacts[id];
+            const infoDiv = document.getElementById('artifact-info');
+
+            const panelTitleEl = document.getElementById('artifact-panel-title');
+
+            // Support des clés en français et en anglais (titre/title, artiste/inventor, année/year...)
+            const titleVal = artifact.titre || artifact.title || '';
+            const imageVal = artifact.image || '';
+            const descVal = artifact.description || artifact.desc || '';
+
+            // Masquer le bandeau du panneau pour les objets de type 'Présentation' (sans titre)
+            try {
+                if (panelTitleEl) {
+                    const hasPresentationOnly = !titleVal && ('Présentation' in artifact || 'Presentation' in artifact);
+                    panelTitleEl.style.display = hasPresentationOnly ? 'none' : '';
+                }
+            } catch (e) {
+                // ignore
+            }
+
+            const titleHtml = titleVal ? `<h3 class="text-xl font-bold text-gray-800 mb-2">${titleVal}</h3>` : '';
+            const imageHtml = imageVal ? `<img src="${imageVal}" alt="${titleVal}" class="w-full h-auto max-h-64 object-contain rounded-lg mb-4">` : '';
+            const descHtml = descVal ? `<p class="mb-3">${descVal}</p>` : '';
+
+            // Mapping des clés vers des libellés français (fallback : première lettre en majuscule)
+            const labelMap = {
+                title: 'Titre',
+                titre: 'Titre',
+                description: 'Description',
+                artiste: 'Artiste',
+                artist: 'Artiste',
+                inventor: 'Inventeur',
+                inventeur: 'Inventeur',
+                year: 'Année',
+                année: 'Année',
+                lieu: 'Lieu',
+                'Lieu de création': 'Lieu de création',
+                'Matière/technique': 'Matière/technique',
+                medium: 'Matière/technique',
+                'numéro d\'inventaire': "Numéro d'inventaire",
+                dimensions: 'Dimensions',
+                company: 'Compagnie',
+                impact: 'Impact'
+            };
+
+            let detailsHtml = '';
+            Object.keys(artifact).forEach(key => {
+                if (['title','titre','image','description','desc'].includes(key)) return;
+                const value = artifact[key];
+                if (value === undefined || value === null || value === '') return;
+                let label = labelMap[key];
+                if (!label) {
+                    const normalized = String(key).replace(/_/g, ' ');
+                    label = normalized.charAt(0).toUpperCase() + normalized.slice(1);
+                }
+                detailsHtml += `<p><span class="font-semibold">${label} :</span> ${value}</p>`;
+            });
+
+            infoDiv.innerHTML = `
+                ${titleHtml}
+                ${imageHtml}
+                ${descHtml}
+                <div class="bg-gray-100 p-3 rounded-lg">
+                    ${detailsHtml}
+                </div>
+            `;
+        }
+
+        
+        function showInfo(id) {
+                const infos = {
+                    info1: {
+                        title: "Capron et Vallauris",
+                        content: "Roger Capron, formé aux Arts appliqués à Paris, s’installe à Vallauris en 1946, un village des Alpes-Maritimes devenu un foyer majeur de la céramique moderne. D’abord connu pour ses carrelages colorés et ses productions industrielles (comme ceux de la gare maritime de Cannes), il se tourne ensuite vers des créations plus personnelles, explorant des techniques comme le raku, technique japonaise, et la terre enfumée. L’Arche, réalisée en 1998, est une sculpture plate en terre noire enfumée, rehaussée de couleurs vives. Ses formes s’assemblent comme un puzzle, mêlant figures humaines et animaux, entre tradition méditerranéenne et imagination moderne. Cette œuvre incarne l’esprit de Vallauris : un lieu où l’artisanat rencontre l’art contemporain, et où des artistes comme Capron ont fait de la céramique un langage universel, entre héritage local et rayonnement international."
+                    },
+                    info2: {
+                        title: "Nagasawa, du Japon à la France",
+                        content: "Setsuko Nagasawa, artiste japonaise installée en France, puise dans les traditions du raku, une technique ancestrale née au XVIe siècle pour la cérémonie du thé. À Sèvres, elle réinterprète cet héritage avec une sensibilité contemporaine. Ombre, créée en 2010, est une sculpture en grès raku, cuite à basse température puis rapidement refroidie, ce qui provoque des craquelures aléatoires et des reflets métalliques uniques. Les nuances de noir et de gris, associées à des effets de transparence, évoquent une présence à la fois fragile et mystérieuse. Cette œuvre illustre le dialogue entre l’Orient et l’Occident : Nagasawa y fusionne la rigueur du geste japonais et la liberté créatrice acquise en France. À travers Ombre, elle montre comment la céramique, porteuse de mémoire et d’innovation, devient un pont entre les cultures."
+                    },
+                    info3: {
+                        title: "Art déco et céramique",
+                        content: "Ce vase, créé à la Manufacture de Sèvres en 1929, est l’œuvre d’Émile-Jacques Ruhlmann, maître de l’Art déco, et de la céramiste Germaine Couret-Duminy. Fabriqué en porcelaine dure, il est décoré par gravure fine, une technique exigeante qui révèle la précision et l’élégance caractéristiques du style Ruhlmann. Les motifs géométriques, inspirés par les arts décoratifs des années 1920, s’inscrivent dans une recherche d’équilibre entre rigueur française et influences internationales. Ce vase incarne l’esprit de Sèvres à cette époque : un lieu où tradition et modernité se rencontrent. Ruhlmann, designer emblématique, y impose un style épuré et luxueux, tout en collaborant avec des artisans d’exception."
+                    },
+                    info4: {
+                        title: "Soulages, superstar contemporaine",
+                        content: "Ce vase est né d’une collaboration exceptionnelle entre Pierre Soulages et la Manufacture de Sèvres. Réalisé en porcelaine dure, sa surface extérieure est striée verticalement et recouverte d’un émail noir semi-mat, signature de l’artiste, tandis que l’intérieur est tapissé de 400 grammes d’or pur 24 carats, visible par un oculus découpé dans la paroi. Un jeu de lumière traverse l’ouverture supérieure, illuminant l’or comme une révélation. Conçu en 2000 pour la Présidence française, ce vase est devenu un symbole d’échange culturel. Il a reçu le Prix du plus bel objet au PAD Paris en 2009. Unique incursion de Soulages dans la céramique, cette pièce incarne son obsession pour le dialogue entre ombre et lumière, transformant un objet traditionnel en une œuvre contemplative, entre héritage artisanal et abstraction radicale.les processus écologiques."
+                    },
+                    info5: {
+                        title: "Picasso et la céramique",
+                        content: "Avec Femme à l’amphore, Pablo Picasso inscrit la céramique dans un dialogue entre héritage antique et création moderne. Réalisée à Vallauris, cette œuvre témoigne de son appropriation d’un médium traditionnel qu’il transforme en un espace d’expérimentation artistique. Les lignes noires et la patine rappellent la céramique antique, tandis que la silhouette du vase évoque les statuettes hellénistiques de Tanagra, en Béotie, dont l’influence sur l’artiste est bien établie. À travers cette pièce, Picasso revisite des formes méditerranéennes anciennes dans un contexte contemporain, affirmant la céramique comme un langage artistique capable de circuler entre les cultures et les époques."
+                    },
+                    info6: {
+                        title: "Bracquemond et le japonisme",
+                        content: "Cette assiette, dessinée par Félix Bracquemond pour la manufacture Haviland à Limoges, illustre la rencontre entre innovation artistique et production artisanale de la fin du XIXᵉ siècle. Créée dans le cadre du service parisien édité par Haviland, elle combine porcelaine dure et décor imprimé ou peint, témoignant d’un savoir-faire industriel mis au service d’une esthétique raffinée. Bracquemond est un pionnier du japonisme dans les arts décoratifs européens : une réception des formes et des rythmes visuels venus d’Asie qui a profondément transformé le langage décoratif en France et au-delà. En associant un artiste français, une manufacture limougeaote et des motifs issus d’un échange culturel global, cette assiette incarne comment la céramique devient, au XIXᵉ siècle, un lieu d’intégration des influences mondiales ainsi qu'un objet utilitaire élevé au rang d’œuvre d’art."
+                    }
+                };
+
+            const info = infos[id];
+            const infoDiv = document.getElementById('artifact-info');
+            infoDiv.innerHTML = `
+                <h3 class="text-xl font-bold text-amber-800 mb-2">${info.title}</h3>
+                <div class="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r">
+                    <p class="text-amber-800">${info.content}</p>
+                </div>
+            `;
+        }
+        
+        // Supprime l'image dans le panneau d'info (utilisé par les blocs colorés)
+        function hideArtifactImage() {
+            const infoDiv = document.getElementById('artifact-info');
+            const img = infoDiv.querySelector('img');
+            if (img) img.remove();
+            // masquer aussi le titre du panneau (comportement attendu pour les blocs teal)
+            const panelTitleEl = document.getElementById('artifact-panel-title');
+            if (panelTitleEl) panelTitleEl.style.display = 'none';
+        }
+
+        // Attacher les écouteurs pour les points d'info (carrés ambre)
+        (function attachInfoPointHandlers(){
+            const points = document.querySelectorAll('.info-point');
+            points.forEach(pt => {
+                // role/button et tabindex pour accessibilité
+                pt.setAttribute('role','button');
+                if (!pt.hasAttribute('tabindex')) pt.setAttribute('tabindex','0');
+                // rendre cliquable au clavier
+                pt.addEventListener('keydown', (e)=>{
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        showInfo(pt.dataset.info);
+                    }
+                });
+                pt.addEventListener('click', ()=> showInfo(pt.dataset.info));
+                // forcer pointer-events au cas où un overlay bloque
+                pt.style.pointerEvents = 'auto';
+            });
+        })();
+    </script>
+    <script>feather.replace();</script>
+</body>
+</html>
+
+

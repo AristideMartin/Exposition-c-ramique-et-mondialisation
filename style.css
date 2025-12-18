@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 0;
+    padding-left: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* Exhibition progress indicator */
+.progress-indicator {
+    position: relative;
+    height: 4px;
+    background-color: #e5e7eb;
+    margin: 20px 0;
+}
+
+.progress-bar {
+    position: absolute;
+    height: 100%;
+    background-color: #4f46e5;
+    transition: width 0.3s ease;
+}
+/* Styles for interactive elements */
+.artifact-eye {
+    transition: transform 0.2s ease;
+}
+
+.artifact-eye:hover {
+    transform: scale(1.1);
+}
+
+.info-square {
+    transition: all 0.2s ease;
+}
+
+.info-square:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Animation for artifact selection and info display */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#artifact-info > div {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .room-layout {
+        height: 300px;
+    }
+}

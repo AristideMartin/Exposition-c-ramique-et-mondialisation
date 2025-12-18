@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renaissance Art Room | Artifacts & Wonders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        /* Style pour le fond de la salle Renaissance */
+        .renaissance-room-bg {
+            background-image: url('https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/salle2.png');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <custom-navbar></custom-navbar>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">La céramique, moteur et produit de la mondialisation</h1>
+            <div class="flex items-center text-gray-500">
+                <i data-feather="clock" class="mr-2"></i>
+                <span>Temps de visite estimé : 20 minutes</span>
+            </div>
+        </section>
+
+        <div class="flex justify-center mb-8">
+            <div class="bg-white rounded-full shadow-md px-6 py-2 inline-flex items-center">
+                <span class="text-indigo-600 font-medium">Salle Actuelle : 2 sur 3</span>
+                <a href="room1.html" class="ml-4 text-gray-600 hover:text-indigo-600 transition flex items-center">
+                    <i data-feather="arrow-left" class="mr-1"></i> Salle Précédente
+                </a>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Plan de la Salle</h2>
+                    <div class="relative rounded-lg h-96 overflow-hidden">
+                        <!-- Fond d'image Renaissance avec filtre léger -->
+                        <div class="absolute inset-0 renaissance-room-bg z-0"></div>
+                        <div class="absolute inset-0 bg-black/10 z-0"></div> <!-- Filtre pour améliorer la lisibilité -->
+
+                        <!-- Conteneur pour TOUS les blocs cliquables -->
+                        <div class="relative h-full z-10">
+                            <!-- Blocs indigo avec images -->
+                            <div class="absolute top-[235px] right-[100px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition"
+                                onclick="showArtifact('artifact1')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/plat_mongol.png" alt="Artifact 1" class="w-8 h-8 object-contain">
+                            </div>
+                            <div class="absolute top-[85px] right-[100px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition"
+                                onclick="showArtifact('artifact2')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/plat%20iznick.png" alt="Artifact 2" class="w-8 h-8 object-contain">
+                            </div>
+                            <div class="absolute top-[160px] right-[80px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition"
+                                onclick="showArtifact('artifact3')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/carreaux.png" alt="Artifact 3" class="w-8 h-8 object-contain">
+                            </div>
+                            <div class="absolute top-[44%] right-[46%] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition"
+                                onclick="showArtifact('artifact4')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/1ere_trace_th%C3%A9.png" alt="Artifact 4" class="w-8 h-8 object-contain">
+                            </div>
+                            <div class="absolute top-[13%] left-[30%] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition"
+                                onclick="showArtifact('artifact5')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/th%C3%A9i%C3%A8re_qing.png" alt="Artifact 5" class="w-8 h-8 object-contain">
+                            </div>
+                            <div class="absolute top-[0%] left-[50%] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition"
+                                onclick="showArtifact('artifact6')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/bol_th%C3%A9_japonais.png" alt="Artifact 6" class="w-8 h-8 object-contain">
+                            </div>
+                            <div class="absolute bottom-[40px] left-[200px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition"
+                                onclick="showArtifact('artifact7')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/th%C3%A9i%C3%A8re_fran%C3%A7aise.JPG" alt="Artifact 7" class="w-8 h-8 object-contain">
+                            </div>
+
+                            <!-- Bloc indigo pour artifact8 -->
+                            <div class="absolute bottom-[22px] left-[360px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition"
+                                onclick="showArtifact('artifact8')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/image_2025-12-18_182153963.png" alt="Artifact 8" class="w-8 h-8 object-contain">
+                            </div>
+
+                            <!-- Bloc indigo pour artifact9 -->
+                            <div class="absolute bottom-[13px] right-[280px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition"
+                                onclick="showArtifact('artifact9')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/th%C3%A9i%C3%A8re_anglaise.png" alt="Artifact 9" class="w-8 h-8 object-contain">
+                            </div>
+
+                            <!-- Bloc coloré supplémentaire (teal) : icône-image mais pas dans le panneau d'info -->
+                            <div class="absolute top-[43%] right-[63%] w-12 h-12 bg-teal-100 rounded-full border-2 border-teal-400 flex items-center justify-center cursor-pointer hover:bg-teal-200 transition" onclick="showArtifact('artifact10'); hideArtifactImage()" title="Voir (sans image)">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/IMG-20251218-WA0000.jpg" alt="Teal Icon" class="w-8 h-8 object-contain">
+                            </div>
+
+                            <!-- Carrés ambre (info) -->
+                            <div class="absolute top-[10px] right-[300px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info1')">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+                            <div class="absolute top-[200px] left-[320px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info2')">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+                            <div class="absolute bottom-[290px] right-[140px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info3')">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+                            <!-- Nouveaux carrés ambre non superposés -->
+                            <div class="absolute top-[80px] left-[140px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info11')" title="Informations supplémentaires">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+
+                            <div class="absolute bottom-[60px] right-[170px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info12')" title="Informations supplémentaires">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+
+                            <div class="absolute bottom-[20px] right-[250px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info13')" title="Informations supplémentaires">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+
+                            <div class="absolute top-[240px] left-[420px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info14')" title="Informations supplémentaires">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+                            <div class="absolute bottom-[80px] left-[170px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info4')">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+                            <div class="absolute bottom-[160px] right-[120px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info5')">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+
+                            <!-- Case violette (parcours enfant) -->
+                            <div class="absolute top-[280px] right-[280px] w-10 h-10 bg-purple-100 border-2 border-purple-400 flex items-center justify-center cursor-pointer hover:bg-purple-200 transition"
+                                onclick="showKidInfo()">
+                                <i data-feather="smile" class="text-purple-600"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="bg-white rounded-xl shadow-lg p-6 sticky top-8">
+                    <h2 id="artifact-panel-title" class="text-2xl font-bold text-gray-800 mb-4">Informations sur l'Œuvre</h2>
+                    <div id="artifact-info" class="text-gray-600">
+                        <p class="text-center py-8">Cliquez sur une œuvre dans le plan de la salle pour voir les détails</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="container mx-auto px-4 py-8 text-center">
+        <a href="room3.html" class="inline-block px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition text-lg font-medium">
+            Passer aux Céramiques Modernes <i data-feather="arrow-right" class="inline ml-2"></i>
+        </a>
+    </div>
+
+    <custom-footer></custom-footer>
+
+    <script>
+        function showKidInfo() {
+            const infoDiv = document.getElementById('artifact-info');
+            infoDiv.innerHTML = `
+                <h3 class="text-xl font-bold text-purple-800 mb-2">Parcours Enfant</h3>
+                <div class="bg-purple-50 border-l-4 border-purple-400 p-4 rounded-r">
+                    <p class="text-purple-800">Bonjour petit amateur de thé ! Peux-tu deviner lesquelles de ces théières viennent de Chine?</p>
+                    <p class="text-purple-800 mt-2">Appuie sur le bouton pour voir la réponse!</p>
+                    <button onclick="showKidSurprise()" class="mt-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">
+                        Voir l'activité
+                    </button>
+                </div>
+            `;
+        }
+
+        function showKidSurprise() {
+            const infoDiv = document.getElementById('artifact-info');
+            infoDiv.innerHTML = `
+                <h3 class="text-xl font-bold text-purple-800 mb-2">À toi de jouer !</h3>
+                <div class="bg-purple-50 border-l-4 border-purple-400 p-4 rounded-r">
+                    <p class="text-purple-800">Aucune de ces théières ne vient de Chine.
+Elles ont été fabriquées en Europe au XIXᵉ siècle, mais leurs formes et leurs décors s’inspirent de la porcelaine chinoise, très à la mode à l’heure du thé !</p>
+                    <p class="text-purple-800 mt-2">Et toi? Aime-tu le thé ?</p>
+                </div>
+            `;
+        }
+
+        function showArtifact(id) {
+            const artifacts = {
+                artifact1: {
+                    title: "Plat à bordue à huit feuilles",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/plat_mongol.png",
+                    "Datation en siècle": '13e - 14e siècle',
+                    "Lieu de création": "Jingdezhen, Chine",
+                    "Matière/technique": "Terre cuite polychrome",
+                    lieu: "Shanghai Museum, Chine",
+                },
+                artifact2: {
+                    title: "Plat à la palme",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/plat%20iznick.png",
+                    "Datation": "vers 1580",
+                    "Lieu de provenance": "Iznick, Turquie",
+                    "Matière/technique": "Céramique (pâte siliceuse), décor peint sur engobe sous glaçure transparente",
+                    lieu: "Musée du Louvre, paris",
+                    dimensions: "Diamètre : 30 cm ; Diamètre : 17 cm (Min) ; Hauteur : 6,3 cm (Max)",
+                    "numéro d'inventaire": "AD 3531"
+                },
+
+                artifact3: {
+                    title: "Vitrine : carreaux de faïence",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/carreaux.png",
+                     "1": "1375 / 1500,  Monde iranien, Musée du Louvre, AD 15129",
+                     "2": "1570 / 1700, Syrie , Musée du Louvre, AD 510",
+                     "3": "1530 / 1540,  Iznik, Musée du Louvre, OA 7456/16",
+                     "4": "1700 / 1800, Tunisie, Musée du Louvre, MAO 936/830"
+                },
+                artifact4: {
+                    title: "Plus vielle trace de thé bouilli",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/1ere_trace_th%C3%A9.png",
+                    "Datation": "entre -453 et -410",
+                    "Lieu de découverte": "province de Shandong, Chine",
+                    "Matière/technique": "Terre cuite polychrome",
+                    lieu: "Shandong University, Chine"                },
+
+                artifact5: {
+                    title: "Théière Qing",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/th%C3%A9i%C3%A8re_qing.png",
+                    date: "1736 /1795",
+                    lieu: "Musée Guimet, Paris",
+                },
+                
+                artifact6: {
+                    title: "Bol à quatre côtés avec plantes à fleurs",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/bol_th%C3%A9_japonais.png",
+                    "Datation": ",12e siècle",
+                    "Lieu de création": "région d'Arita de Kyushu ",
+                    lieu: "Tokyo Nationnal Museum",
+                },
+                artifact7: {
+                    title: "Théière française en porcelaine tendre",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/th%C3%A9i%C3%A8re_fran%C3%A7aise.JPG",
+                    date: "1765",
+                    "Lieu de création": "Manufacture de Sèvres, France",
+                    "Matière/technique": "porcelaine",
+                    lieu: "Musée du Louvre, Paris",
+                    dimensions: "Hauteur: 14 cm (maximum), Longueur: 18,5 cm (maximum), Largeur: 10,5 cm (maximum)",
+                    "numéro d'inventaire": "R 792"
+                },
+                artifact8: {
+                    title: "Service à thé",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/image_2025-12-18_182153963.png",
+                    date: "1750 / 1760",
+                    "Lieu de création": "Manufacture de Meissen, Allemagne",
+                    "Matière/technique": "porcelaine",
+                    lieu: "Musée des Arts Décoratifs, Paris",
+                },
+                artifact9: {
+                    title: "Théière anglaise",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/th%C3%A9i%C3%A8re_anglaise.png",
+                    date: " 1745–1749",
+                    "Lieu de création": "Chelsea Porcelain Manufactory , Angleterre",
+                    "Matière/technique": "porcelaine",
+                    lieu: "Musée du Louvre, Paris",
+                    dimensions: "Hauteur: 12,3 cm (maximum), Longueur: 17,5 cm (maximum), Largeur: 10,8 cm (maximum)",
+                    "numéro d'inventaire": "2014.712.15a, b"},
+                artifact10: {
+                    "Présentation": "À partir du Moyen Âge, la diffusion des céramiques s’accélère et prend une dimension véritablement transcontinentale. Les routes commerciales, terrestres comme maritimes, favorisent l’essor d’échanges où l’objet céramique devient à la fois produit et symbole de prestige. Ce mouvement engendre de nombreux phénomènes d’imitation artistique : les ateliers européens et maghrébins s’inspirent des décors de l’orient musulman, eux‑mêmes nourris par l’art mongol, créant une dynamique d’influences croisées. Le monde arabo‑musulman agit comme caisse de résonance, transmettant techniques et styles, tels que les rinceaux et motifs floraux mongols vers l’Occident. Parallèlement, la porcelaine chinoise, étroitement liée au commerce du thé, s’impose comme un produit phare. Sa finesse et sa blancheur fascinent les élites, stimulant la création de manufactures locales qui cherchent à reproduire son éclat. Ces centres de production – de Jingdezhen à Delft en passant par Sèvres, Meissen ou encore Chelsea – participent à l’industrialisation de l’artisanat et à l’émergence d’un marché international. La céramique devient ainsi moteur de mondialisation : elle circule, s’adapte, se réinvente, tout en façonnant les goûts et les pratiques sociales. Objet d’usage et de luxe, elle incarne l’interconnexion croissante des sociétés et la naissance d’une économie culturelle globale."
+             } };
+
+            const artifact = artifacts[id];
+            const infoDiv = document.getElementById('artifact-info');
+
+            const panelTitleEl = document.getElementById('artifact-panel-title');
+
+            const titleVal = artifact.titre || artifact.title || '';
+            const imageVal = artifact.image || '';
+            const descVal = artifact.description || artifact.desc || '';
+
+            // Masquer le bandeau du panneau pour les objets de type 'Présentation' (sans titre)
+            try {
+                if (panelTitleEl) {
+                    const hasPresentationOnly = !titleVal && ('Présentation' in artifact || 'Presentation' in artifact);
+                    panelTitleEl.style.display = hasPresentationOnly ? 'none' : '';
+                }
+            } catch (e) {
+                // ignore
+            }
+
+            const titleHtml = titleVal ? `<h3 class="text-xl font-bold text-gray-800 mb-2">${titleVal}</h3>` : '';
+            const imageHtml = imageVal ? `<img src="${imageVal}" alt="${titleVal}" class="w-full h-auto max-h-64 object-contain rounded-lg mb-4">` : '';
+            const descHtml = descVal ? `<p class="mb-3">${descVal}</p>` : '';
+
+            const labelMap = {
+                title: 'Titre',
+                titre: 'Titre',
+                description: 'Description',
+                artist: 'Artiste',
+                artiste: 'Artiste',
+                period: 'Période',
+                origin: 'Origine'
+            };
+
+            let detailsHtml = '';
+            Object.keys(artifact).forEach(key => {
+                if (['title','titre','image','description','desc'].includes(key)) return;
+                const value = artifact[key];
+                if (value === undefined || value === null || value === '') return;
+                let label = labelMap[key];
+                if (!label) {
+                    const normalized = String(key).replace(/_/g, ' ');
+                    label = normalized.charAt(0).toUpperCase() + normalized.slice(1);
+                }
+                detailsHtml += `<p><span class="font-semibold">${label} :</span> ${value}</p>`;
+            });
+
+            infoDiv.innerHTML = `
+                ${titleHtml}
+                ${imageHtml}
+                ${descHtml}
+                <div class="bg-gray-100 p-3 rounded-lg">
+                    ${detailsHtml}
+                </div>
+            `;
+        }
+
+        function showInfo(id) {
+            const infos = {
+                info1: {
+                    title: "Thé, bouddhisme et porcelaine",
+                    content: "C'est au XII siècle que le thé arrive au Japon. Importé de Chine avec les philosophies bouddhistes, les objets d'arts surnommées karamono, le thé se fait une place de choix dans la haute société Japonaise qui adopte le Zen ainsi que les cérémonies du thé. Néanmoins, les porcelaines restent des objets de manufacture étrangère jusque dans les années 1610 où la région d'Arita de Kyushu se met à en produire. Ici il s'agit d'un de ces \"Imari ware\" à destination des riches amateurs de thé."
+               },
+                info2: {
+                    title: "Thé et porcelaine : une histoire ancienne",
+                    content: "Ce bol à thé en porcelaine présente plusieurs caractéristiques historiques intéressantes. Il s’agit de la plus vielle trace archéologique de thé bouilli. Cette tasse nous renvoie aux débuts d’une boisson qui marquera l’histoire de la mondialisation : le thé. Mais aussi à une technique céramique qui suivra le thé pendant toute son histoire : la porcelaine. Ici nous somme face à une forme primitive de porcelaine, la véritable porcelaine translucide étant née sous la dynastie des Han 200 ans plus tard"              },
+                info13: {
+                    title: "Tea-time",
+                    content: "Cette théière est l'un des premiers produits de l'usine de Chelsea, devenue principale usine de porcelaine du XVIIIe siècle anglais. Les feuilles d’acanthe sculptées qui semblent enfermer la théière (presque comme un choux) reflète la dépendance à l’égard de motifs de la nature caractéristique de la première production de Chelsea."
+                },
+                info4: {
+                    title: "Porcelaine tendre française",
+                    content: "Cette théière en porcelaine tendre blanche, décorée de bouquets de fleurs est issue de la manufacture de Sèvres – fondée en 1740 sous le règne de Louis XV. Il convient de noter que la porcelaine tendre dont cette théière est composée est le fruit d'une tentative des européens de reproduire la porcelaine chinoise dite \"dure\" et de bien meilleure facture. La manufacture de Sèvre ne commencera à produire des balbutiements de porcelaines dures qu'à partir de 1759, sous la pression des manufactures allemandes, plus performantes.  Il faudra attendre 1800 pour que les français formalisent la recette de la porcelaine dure."
+                },
+                info5: {
+                    title: "Rinceaux iraniens",
+                    content: "Ces faïences à rinceaux montrent la diffusion du style à rinceaux – inspiré du monde mongol, dans le monde musulman. De la Perse à Iznik en passant par Damas jusqu’en Ifrikia, ce style inspire la décoration des mosquée (tel que la Mosquée du Barbier à Kerouan) ou des grandes maisons. Les deux productions de faïences qui seront particulièrement marquées par ce style sont Qallaline à Tunis et l’artisanat d’Iznik."
+                }
+                ,
+                info11: {
+                    title: "Théière Qing",
+                    content: "Cette théière en porcelaine à rinceaux de lotus entremêlés de dragons archaïques kui bleus, sur fond rose imitant les décors incisés sgrafitto provient de la dynastie Qing. Cette pièce est assez tardive, mais représente l’attention portée à la couleur, en particulier le rose que l’on retrouve ailleurs dans la porcelaine japonaise et européenne.",             },
+                info12: {
+                    title: "Meissen, la course à la porcelaine",
+                    content: "Meissen est la première manufacture européenne à avoir percer la recette  de la porcelaine. Ce service à thé comprenant une bouilloire, une théière, une boîte à thé, un sucrier et des tasses présente un décor d’oiseaux dans des médaillons polylobés en réserve sur fond d’écailles rose violacé.Cette décoration n’est pas sans rappeler les fonds d’écailles roses et les motifs floraux de nombreuses théières chinoise de la dynastie Qing." 
+                },
+                info3: {
+                    title: "Céramique et les routes de la soie",
+                    content: "Ce plat à décor de rinceaux peint sur engobe sous glaçure transparente en céramique siliceuse, c'est-à-dire utilisant du sable mélangé à de l'argile, montre l’impact de la culture mongole dans le monde Turc. Ce type de plats provient d’Iznik, ville connue pour ses céramiques à rinceaux d’inspiration perse et mongole. De plus, les motifs de vagues sur le bord de l'assiette sont d'inspirations chinoises." 
+                },
+                info14: {
+                    title: "La porcelaine mongole",
+                    content: "Ce plat en porcelaine à fond peint vernissé décoré de melons, bambous et raisins provient de la troisième dynastie mongole ayant régné sur la Chine. On constate des motifs de rinceaux typiques de l’art mongol qui ont connu une diffusion à échelle mondiale remarquable." 
+                }
+            };
+
+            const info = infos[id];
+            const infoDiv = document.getElementById('artifact-info');
+            infoDiv.innerHTML = `
+                <h3 class="text-xl font-bold text-amber-800 mb-2">${info.title}</h3>
+                <div class="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r">
+                    <p class="text-amber-800">${info.content}</p>
+                </div>
+            `;
+        }
+
+        // Supprime l'image dans le panneau d'info (utilisé par les blocs colorés)
+        function hideArtifactImage() {
+            const infoDiv = document.getElementById('artifact-info');
+            const img = infoDiv.querySelector('img');
+            if (img) img.remove();
+            // masquer aussi le titre du panneau (comportement attendu pour les blocs teal)
+            const panelTitleEl = document.getElementById('artifact-panel-title');
+            if (panelTitleEl) panelTitleEl.style.display = 'none';
+        }
+    </script>
+    <script>feather.replace();</script>
+</body>
+</html>
