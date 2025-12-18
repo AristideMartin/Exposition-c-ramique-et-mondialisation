@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancient Civilizations Room | Artifacts & Wonders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        /* Style pour le fond de la salle archéologique */
+        .archaeology-room-bg {
+            background-image: url('https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/salle1.png');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <custom-navbar></custom-navbar>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">La céramique, emprunte des premiers échanges inter-civilisationnel</h1>
+            <p class="text-gray-600 mb-4"></p>
+            <div class="flex items-center text-gray-500">
+                <i data-feather="clock" class="mr-2"></i>
+                <span>Temps de visite estimé : 20 minutes</span>
+            </div>
+        </section>
+
+        <div class="flex justify-center mb-8">
+            <div class="bg-white rounded-full shadow-md px-6 py-2 inline-flex items-center">
+                <span class="text-indigo-600 font-medium">Salle Actuelle : 1 sur 3</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Plan de la Salle</h2>
+                    <div class="relative rounded-lg h-96 overflow-hidden">
+                        <!-- Fond d'image archéologique avec filtre léger -->
+                        <div class="absolute inset-0 archaeology-room-bg z-0"></div>
+                        <div class="absolute inset-0 bg-black/10 z-0"></div> <!-- Filtre pour améliorer la lisibilité -->
+
+                        <!-- Conteneur pour TOUS les blocs cliquables -->
+                        <div class="relative h-full z-10">
+                            <!-- Blocs indigo (yeux) - positionnés au-dessus du fond (1..10) -->
+                            <div class="absolute top-[46%] left-[200px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition" onclick="showArtifact('artifact1')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/lapitas.png" alt="Artifact 1" class="w-8 h-8 object-contain">
+                            </div>
+
+                            <div class="absolute top-[39%] left-[200px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition" onclick="showArtifact('artifact2')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/lapita.png" alt="Artifact 2" class="w-8 h-8 object-contain">
+                            </div>
+
+                            <div class="absolute bottom-[26px] left-[70px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition" onclick="showArtifact('artifact3')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/vase%20double%20goulot.png" alt="Artifact 3" class="w-8 h-8 object-contain">
+                            </div>
+                                <!-- Carré ambre cliquable (à gauche du vase double goulot) -->
+
+                            <div class="absolute bottom-[29px] left-[250px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition" onclick="showArtifact('artifact4')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/bonhomme%20double%20goulot.png" alt="Artifact 4" class="w-8 h-8 object-contain">
+                            </div>
+                                <div class="absolute bottom-[39px] left-[200px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition" onclick="showInfo('info9')" title="Plus d'informations">
+                                    <i data-feather="info" class="text-amber-600"></i>
+                                </div>
+
+                            <div class="absolute top-[20px] left-[250px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition" onclick="showArtifact('artifact5')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/calice%20sigill%C3%A9.png" alt="Artifact 5" class="w-8 h-8 object-contain">
+                            </div>
+
+                            <div class="absolute top-[20px] left-[480px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition" onclick="showArtifact('artifact6')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/vase%20sigill%C3%A9.png" alt="Artifact 6" class="w-8 h-8 object-contain">
+                            </div>
+
+                            <div class="absolute bottom-[46%] left-[54%] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition" onclick="showArtifact('artifact7')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/pithos_romain.JPG" alt="Artifact 7" class="w-8 h-8 object-contain">
+                            </div>
+
+                            <div class="absolute bottom-[46%] left-[77%] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition" onclick="showArtifact('artifact8')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/amphore_soussienne.JPG" alt="Artifact 8" class="w-8 h-8 object-contain">
+                            </div>
+                                <!-- Bloc coloré supplémentaire (teal) : affiche une image dans l'icône mais pas dans le panneau d'info -->
+                                <div class="absolute top-[42%] left-[52px] w-12 h-12 bg-teal-100 rounded-full border-2 border-teal-400 flex items-center justify-center cursor-pointer hover:bg-teal-200 transition" onclick="showArtifact('artifact11'); hideArtifactImage()" title="Voir (sans image)">
+                                    <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/IMG-20251218-WA0000.jpg" alt="Teal Icon" class="w-8 h-8 object-contain">
+                                </div>
+
+                            <div class="absolute top-[26px] left-[70px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition" onclick="showArtifact('artifact9')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/ampoule_st_menas.JPG" alt="Artifact 9" class="w-8 h-8 object-contain">
+                            </div>
+
+                            <div class="absolute bottom-[25px] left-[440px] w-12 h-12 bg-indigo-100 rounded-full border-2 border-indigo-400 flex items-center justify-center cursor-pointer hover:bg-indigo-200 transition" onclick="showArtifact('artifact10')">
+                                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/rhyton.JPG" alt="Artifact 10" class="w-8 h-8 object-contain">
+                            </div>
+                                <div class="absolute bottom-[35px] left-[480px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition" onclick="showInfo('info10')" title="Plus d'informations">
+                                    <i data-feather="info" class="text-amber-600"></i>
+                                </div>
+
+                            <!-- Carrés ambre (info) -->
+                            <div class="absolute top-[42%] left-[160px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info1')">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+                            <div class="absolute top-[200px] left-[300px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info2')">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+                            <div class="absolute top-[29px] left-[130px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info3')">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+                            <div class="absolute bottom-[140px] right-[90px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info4')">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+                            <div class="absolute top-[20px] left-[450px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info5')">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+                            <div class="absolute top-[26px] left-[298px] w-10 h-10 bg-amber-100/90 border-2 border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-200 transition"
+                                onclick="showInfo('info7')">
+                                <i data-feather="info" class="text-amber-600"></i>
+                            </div>
+
+                            <!-- Case violette (parcours enfant) -->
+                            <div class="absolute top-[300px] left-[160px] w-10 h-10 bg-purple-100 border-2 border-purple-400 flex items-center justify-center cursor-pointer hover:bg-purple-200 transition"
+                                onclick="showKidInfo()">
+                                <i data-feather="smile" class="text-purple-600"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="bg-white rounded-xl shadow-lg p-6 sticky top-8">
+                    <h2 id="artifact-panel-title" class="text-2xl font-bold text-gray-800 mb-4">Informations sur l'œuvre</h2>
+                    <div id="artifact-info" class="text-gray-600">
+                        <p class="text-center py-8">Cliquez sur une œuvre ou un cartel dans le plan de la salle pour voir les détails</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="container mx-auto px-4 py-8 text-center">
+        <a href="room2.html" class="inline-block px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition text-lg font-medium">
+            Passer à la salle suivante <i data-feather="arrow-right" class="inline ml-2"></i>
+        </a>
+    </div>
+
+    <custom-footer></custom-footer>
+
+    <script>
+        function showKidInfo() {
+            const infoDiv = document.getElementById('artifact-info');
+            infoDiv.innerHTML = `
+                <h3 class="text-xl font-bold text-purple-800 mb-2">Parcours Enfant</h3>
+                 <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/vase%20double%20goulot.png"
+                     alt="Enfant découvrant une poterie ancienne"
+                     class="w-full h-auto max-h-64 object-contain rounded-lg mb-4">
+                <div class="bg-purple-50 border-l-4 border-purple-400 p-4 rounded-r">
+                    <p class="text-purple-800">Salut petit explorateur ! Savais-tu que cet objet a été fait par les mêmes gens qui firent de drôles de dessins dans le désert?</p>
+                    <p class="text-purple-800 mt-2">Touche l'écran pour découvrir leurs dessins!</p>
+                    <button onclick="showKidSurprise()"
+                            class="mt-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">
+                        Voir les dessins surprises
+                    </button>
+                </div>
+            `;
+        }
+
+        function showKidSurprise() {
+            const infoDiv = document.getElementById('artifact-info');
+            infoDiv.innerHTML = `
+                <h3 class="text-xl font-bold text-purple-800 mb-2">Super découverte !</h3>
+                <img src="https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/nazca.jpg" alt="Surprise pour enfants" class="w-full h-auto max-h-64 object-contain rounded-lg mb-4">
+                <div class="bg-purple-50 border-l-4 border-purple-400 p-4 rounded-r">
+                    <p class="text-purple-800">Ces dessins sont assez mystérieux. Ils étaient probablement faits lors de processions religieuses. Par le passé, des gens ont pensé que ces dessins avaient été fait par des extraterrestres!</p>
+                    <p class="text-purple-800 mt-2">Peux-tu imaginer de nouveaux dessins nazcas?</p>
+                </div>
+            `;
+        }
+
+        function showArtifact(id) {
+            const artifacts = {
+                artifact1: {
+                    title: "Tessons lapita",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/lapitas.png",
+                    "Lieu de découverte": "Papouasie-Nouvelle-Guinée",
+                    "Matière/technique": "Terre cuite, pigment blanc (chaux)",
+                    lieu: "Quai Branly",
+                    dimensions: "12,8 x 6,5 x 1,3 cm, 108 g",
+                    "numéro d'inventaire": "71.1934.188.1302.7-8"
+                },
+                artifact2: {
+                    title: "Tesson Lapita",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/lapita.png",
+                    "Lieu de découverte": "Papouasie-Nouvelle-Guinée",
+                    "Matière/technique": "Terre cuite, pigment blanc (chaux)",
+                    lieu: "Quai Branly",
+                    dimensions: "1,6 x 9,5 x 1,2 cm, 150 g",
+                    "numéro d'inventaire": "71.1934.188.1326"
+                },
+                artifact3: {
+                    title: "Récipient à double goulot et anse plate",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/vase%20double%20goulot.png",
+                    "Lieu de découverte": "Nazca, Pérou",
+                    "Matière/technique": "Terre cuite polychrome",
+                    lieu: "Quai Branly",
+                    dimensions: "15 x 14 x 14 cm, 407,5 g",
+                    "numéro d'inventaire": "71.1911.21.23"
+                },
+                artifact4: {
+                    title: "Récipient zoomorphe à double goulot et anse-pont",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/bonhomme%20double%20goulot.png",
+                    "Lieu de découverte": "Antiqua, Colombie",
+                    "Matière/technique": "Terre cuite polychrome",
+                    lieu: "Quai Branly",
+                    dimensions: "15 x 14 x 14 cm, 407,5 g",
+                    "numéro d'inventaire": "71.1891.57.158"
+                },
+                artifact5: {
+                    title: "Calice sigillé",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/calice%20sigill%C3%A9.png",
+                    "Lieu de découverte": "Italie",
+                    "Datation en siècle": "1e siècle",
+                    "Matière/technique": "Terre cuite, Céramique sigillée, moulée, estampée",
+                    lieu: "Musée du Louvre",
+                    dimensions: "Diamètre : 18,9 cm (vasque) ; Hauteur : 12,1 cm ; Diamètre : 9,37 cm (pied)",
+                    "numéro d'inventaire": "N 4126"
+                },
+                artifact6: {
+                    title: "Vase sigillé",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/vase%20sigill%C3%A9.png",
+                    "Lieu de découverte": "Paris",
+                    "Datation en siècle": "2e-3e siècle",
+                    "Matière/technique": "Terre cuite, Céramique sigillée",
+                    lieu: "Musée Carnavalet",
+                    dimensions: "Hauteur: 14.7 cm - Diamètre au col: 8.4 cm - Diamètre à la panse: 13 cm - Diamètre à la base: 5.7 cm",
+                    "numéro d'inventaire": "AC1636"
+                },
+                artifact7: {
+                    title: "Pithos romain",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/pithos_romain.JPG",
+                    "Lieu de création": "Caeré",
+                    "Lieu de découverte": "Italie",
+                    "Datation en siècle": " -625 / -570",
+                    "Matière/technique": "Terre cuite, Céramique sigillée",
+                    lieu: "Musée du Louvre, Paris",
+                    dimensions: "Hauteur: 73 cm, Diamètre: 44 cm",
+                    "numéro d'inventaire": "Cp 24026"
+                },
+                artifact8: {
+                    title: "Amphore à fond conique",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/amphore_soussienne.JPG",
+                    "Lieu de création": "Afrique du Nord",
+                    "Lieu de découverte": "Sousse, Tunisie",
+                    "Matière/technique": "Terre cuite, Céramique sigillée",
+                    lieu: "Musée des Beaux-Arts et d'Histoire naturelle, Châteaudun",
+                    dimensions: "Hauteur : 84,5 cm",
+                    "numéro d'inventaire": "89-DE-1-14"
+                },
+                artifact9: {
+                    title: "Ampoule à eulogie de Saint Menas",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/ampoule_st_menas.JPG",
+                    "Lieu de création": "Abou Mena, Egypte",
+                    "Datation en siècle": " 395 / 641 après J.C",
+                    "Matière/technique": "Terre cuite, moulage, peinture",
+                    lieu: "Musée du Louvre, Paris",
+                    dimensions: "Hauteur: 13 cm, Largeur: 10,6 cm",
+                    "numéro d'inventaire": "AF 7035"
+
+                },
+                artifact10: {
+                    title: "Rhyton",
+                    image: "https://huggingface.co/spaces/aristidemartin9/chronoc-ramique-odyssey/resolve/main/images/rhyton.JPG",
+                    "Lieu de création": "Athènes",
+                    "Lieu de découverte": "Naples",
+                    "Datation en siècle": " 5e siècle avant J.C",
+                    lieu: "Musée du Louvre, Paris",
+                    "numéro d'inventaire": "MNB 1294"},
+                artifact11: {
+                    "Présentation": "La céramique accompagne l’histoire humaine depuis le Néolithique céramique, période où l’on maîtrise pour la première fois les hautes températures (vers 6900 av. J.-C.). Cette innovation technique permet de transformer l’argile en un matériau solide, résistant et durable, ouvrant la voie à une multitude d’usages. Dès le deuxième millénaire avant notre ère, des styles similaires apparaissent dans des régions éloignées, révélant l’essor des civilisations et la portée des premiers échanges inter‑communautaires. Les jarres, pithos et amphores deviennent des contenants privilégiés pour conserver denrées et aliments, mais aussi pour transporter huile, vin ou céréales sur de longues distances. La céramique illustre ainsi l’intensification du commerce maritime et terrestre, reliant ports, routes caravanières et marchés. Plus qu’un simple objet utilitaire, elle incarne un vecteur culturel : motifs, formes et techniques se diffusent, s’adaptent et se transforment au contact des autres peuples. Chaque fragment retrouvé témoigne d’une circulation d’idées et d’esthétiques, inscrivant la céramique comme l’un des premiers marqueurs tangibles de la mondialisation naissante, et de l'échange inter-culturel.",
+            }};
+
+            const artifact = artifacts[id];
+            const infoDiv = document.getElementById('artifact-info');
+            const panelTitleEl = document.getElementById('artifact-panel-title');
+
+            const titleVal = artifact.titre || artifact.title || '';
+            const imageVal = artifact.image || '';
+            const descVal = artifact.description || artifact.desc || '';
+
+            // Hide the panel title when the artifact is not an artwork (e.g. artifact11)
+            // Detect by presence of a French 'Présentation' key and absence of a title
+            try {
+                if (panelTitleEl) {
+                    const hasPresentationOnly = !titleVal && ('Présentation' in artifact || 'Presentation' in artifact);
+                    panelTitleEl.style.display = hasPresentationOnly ? 'none' : '';
+                }
+            } catch (e) {
+                // defensive: do nothing on error
+            }
+
+            const titleHtml = titleVal ? `<h3 class="text-xl font-bold text-gray-800 mb-2">${titleVal}</h3>` : '';
+            const imageHtml = imageVal ? `<img src="${imageVal}" alt="${titleVal}" class="w-full h-auto max-h-64 object-contain rounded-lg mb-4">` : '';
+            const descHtml = descVal ? `<p class="mb-3">${descVal}</p>` : '';
+
+            const labelMap = {
+                title: 'Titre',
+                titre: 'Titre',
+                description: 'Description',
+                period: 'Période',
+                origin: 'Origine',
+                artist: 'Artiste',
+                artiste: 'Artiste'
+            };
+
+            let detailsHtml = '';
+            Object.keys(artifact).forEach(key => {
+                if (['title','titre','image','description','desc'].includes(key)) return;
+                const value = artifact[key];
+                if (value === undefined || value === null || value === '') return;
+                let label = labelMap[key];
+                if (!label) {
+                    const normalized = String(key).replace(/_/g, ' ');
+                    label = normalized.charAt(0).toUpperCase() + normalized.slice(1);
+                }
+                detailsHtml += `<p><span class="font-semibold">${label} :</span> ${value}</p>`;
+            });
+
+            infoDiv.innerHTML = `
+                ${titleHtml}
+                ${imageHtml}
+                ${descHtml}
+                <div class="bg-gray-100 p-3 rounded-lg">
+                    ${detailsHtml}
+                </div>
+            `;
+        }
+
+        function showInfo(id) {
+            const infos = {
+                info1: {
+                    title: "La céramique Lapita",
+                    content: "Ces tessons de poterie de couleur gris-rouge décoré par pointillé et incision incrusté de chaux sont témoins des échanges maritimes qu’a connu la civilisation Lapita entre le IIe et le Ier millénaire avant notre ère. On en retrouve sur tout le continent océanien, preuve que ces échanges balayaient de vastes régions du monde."
+                },
+                info2: {
+                    title: "Le pithos",
+                    content: "Le pithos est un contenant d’origine grec. Fait d’une épaisse couche d’argile, il coute cher en raison de la qualité de sa facture. Il a pour fonction de conserver les denrées, d’où son usage dans le transport maritime qui en fait vecteur d’échanges économiques dès l’antiquité."
+                },
+                info3: {
+                    title: "Les premiers pélerinages chrétiens",
+                    content: "Ce type d’ampoules à eulogie est très répandu. Faite de terre cuite d’une qualité très rudimentaire, cette ampoule servait à transporter de l’eau de Saint-Menas, que les pélerins chrétiens du site d’Abou Mena en Égypte remportaient en guise de souvenir. Ce type de céramique démontre l’intensité de la culture du pèlerinage dans l’antiquité."
+                },
+                info4: {
+                    title: "Transport méditerranéen",
+                    content: "Cette grande amphore retrouvée à Sousse (Tunisie) répondait probablement à une fonction de transport maritime, en raison de l’activité portuaire de la ville."
+                },
+                info5: {
+                    title: "L'argile sigillée dans l'empire romain",
+                    content: "À couverte rouge lustrée et décoré à la barbotine, ce vase domestique illustre l’art raffiné de la vaisselle gallo‑romaine. Ses motifs végétaux alternant avec des animaux – tel le cerf – et des putti témoignent de l’importance des thèmes décoratifs dans la vie quotidienne et symbolique. La sigillée, du latin sigillum (« sceau, empreinte »), est une céramique fine de table apparue en Italie dès le Ier siècle av. J.‑C., avant de se diffuser vers l’Afrique du Nord, l’Orient et la Gaule. Caractérisée par sa pâte rouge, son vernis brillant et ses décors moulés ou estampillés portant parfois le nom du potier, elle fut produite et exportée à grande échelle dans tout l’Empire romain. Témoignage de l’essor des échanges et de la circulation des savoir‑faire, ce vase illustre à la fois l’usage quotidien et la dimension culturelle d’une céramique devenue emblème de la romanisation."
+                },
+
+                info9: {
+                    title: "Récipients à double goulot précolombien",
+                    content: "Ces deux céramiques témoignent de la richesse iconographique et symbolique des traditions sud‑américaines. Le premier, issu de la culture Nazca (Pérou, - 100 / 700), associe formes anthropo‑zoomorphes et motifs peints : des démons‑félins ailés, armés de massues et tenant des têtes‑trophées, évoquent l’univers rituel et funéraire. Le second, provenant d’Antioquia en Colombie (- 700 / 150), représente un singe stylisé, décoré de motifs noirs et blancs sur engobe rouge. Reliés par une anse plate, leurs doubles goulots traduisent une fonction à la fois pratique et cérémonielle. A noter que ces céramiques sont réalisées sans tour, car en effet la roue n’était pas utilisée dans le monde précolombien, probablement en raison du manque de gros bétail pour tirer des charrettes. Ensemble, ces objets illustrent l’importance des figures animales et hybrides dans l’imaginaire précolombien, où la céramique devient support de croyances, de mythes et de pratiques funéraires. Ils nous permettent également de mettre en évidence une continuité culturelle sur de larges distances et de larges périodes à travers une tradition céramique encrée. Ces caractéristiques présagent déjà la tendance des céramiques à s’échanger toujours plus loin, imposant avec elles une idée de l’esthétique, du sacré, mais aussi de la technique. "
+                },
+                info10: {
+                    title: "L'Étrurie, la demande et le commerce de la céramique attique",
+                    content: "Ce rhyton, réalisé à Athènes au tournant du Ve siècle av. J.‑C., associe une vasque ornée de scènes de comastes – danseurs de banquet – à une extrémité moulée en tête de lion, dont les détails tels que la langue ou les dents sont rehaussés de couleurs. Destiné au banquet et aux libations, il illustre l’importance de ces pratiques dans la culture grecque classique. De tels rhytons furent exportés en grand nombre vers l’Étrurie, où les élites les intégrèrent à leurs rituels funéraires et à leur culture du prestige. La spécialisation des ateliers attiques dans ce commerce révèle l’intensité des échanges méditerranéens et le rôle de la céramique comme vecteur de circulation artistique et symbolique, mais aussi de transformation de l’économie à destination des régions étrangères. "
+                },
+                info7: {
+                    title: "Ravissement gallo-romain",
+                    content: "Ce calice à pâte fine et dure, sans anse, présente une vasque hémisphérique à lèvre moulurée et un pied large creux. Son décor riche associe frises d’oves et piliers torsadés ornés de masques de Dionysos et de satyres, reliés par des guirlandes de palmes où évoluent des Éros ailés. Objet de vaisselle raffinée, il illustre l’élégance et la symbolique festive de la céramique gallo‑romaine."
+                }
+            };
+
+            const info = infos[id];
+            const infoDiv = document.getElementById('artifact-info');
+            infoDiv.innerHTML = `
+                <h3 class="text-xl font-bold text-amber-800 mb-2">${info.title}</h3>
+                <div class="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r">
+                    <p class="text-amber-800">${info.content}</p>
+                </div>
+            `;
+        }
+
+        // Supprime l'image dans le panneau d'info (utilisé par les blocs colorés)
+        function hideArtifactImage() {
+            const infoDiv = document.getElementById('artifact-info');
+            const img = infoDiv.querySelector('img');
+            if (img) img.remove();
+            // masquer aussi le titre du panneau (comportement attendu pour les blocs teal)
+            const panelTitleEl = document.getElementById('artifact-panel-title');
+            if (panelTitleEl) panelTitleEl.style.display = 'none';
+        }
+    </script>
+    <script>feather.replace();</script>
+</body>
+</html>
